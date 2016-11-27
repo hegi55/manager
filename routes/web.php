@@ -13,9 +13,16 @@
 
 
 
+
 Auth::routes();
 
 //Home Page
-Route::get('/', 'HomeController@index');
-Route::get('/manazer', 'HomeController@index');
+if(Auth::guest()){
+	Route::get('/', 'GuestController@index');
+}else{
+	Route::get('/', 'HomeController@index');
+	Route::get('/manazer', 'HomeController@index');
+}
+
+
 
