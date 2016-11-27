@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use View;
+use Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -21,8 +24,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    //Homepage 
     public function index()
     {
-        return view('home');
+
+        $data = array();
+        return View::make('home', $data);            
     }
 }

@@ -18,3 +18,4 @@ Auth::routes();
 //Home Page
 Route::get('/', 'HomeController@index');
 Route::get('/manazer', 'HomeController@index');
+
